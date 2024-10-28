@@ -5,6 +5,17 @@ const longobt = document.querySelector('.app__card-button--longo');
 const banner = document.querySelector('.app__image');
 const title = document.querySelector('.app__title');
 const buttons = document.querySelectorAll('.app__card-button');
+const musicFocoInput = document.querySelector('#alternar-musica');
+const music = new audio('/sons/luna-rise-part-one.mp3')
+music.loop = true;
+
+musicFocoInput.addEventListener('change', () => {
+    if (music.paused){
+        music.play();
+    }else {
+        music.pause();
+    }
+})
 
 //Claalist representa uma lista de classes css
 focobt.addEventListener('click', () => {
